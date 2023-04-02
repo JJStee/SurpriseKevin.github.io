@@ -9,7 +9,7 @@ About the Project
 The project is has simple web animations created using HTML, CSS, and JavaScript. It features a cute little chicken with a blinking eyes, flapping wings, and moving feet.
 
 License
-This project is licensed under the Creative Commons Attribution-NoDerivs 3.0 Unported license. This means that it can be viewed and shared freely, but cannot be modified without my permission.
+This project is licensed under the Creative Commons Zero v1.0 Universal license. This means that it can be viewed and shared freely, but cannot be modified without my permission.
 
 Enjoy!
 I hope you enjoy this little project and have a wonderful birthday!
