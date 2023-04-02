@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    font-family: Arial, sans-serif;
+    position: relative; /* Add this line */
+    height: 100vh;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+    z-index: 2;
+}
+
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.text {
+    font-size: 5em;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    animation: wiggle 2s infinite, colorChange 6s infinite; /* Add the colorChange animation */
+    text-align: center;
+}
+
+.instruction {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: opacity 1s;
+}
+
+.instruction.hide {
+    opacity: 0;
+}
+
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Add the following keyframes for the colorChange animation */
+@keyframes colorChange {
+    0% {
+        color: #ff0000;
+    }
+    14% {
+        color: #ffaa00;
+    }
+    28% {
+        color: #ffff00;
+    }
+    42% {
+        color: #00ff00;
+    }
+    57% {
+        color: #0000ff;
+    }
+    71% {
+        color: #ff00ff;
+    }
+    85% {
+        color: #ff0000;
+    }
+    100% {
+        color: #ff0000;
+    }
+}
+
+.chicken-css {
+    width: 40px;
+    height: 40px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    position: relative;
+    transition: left 3s, top 3s;
+  }
+  
+  .chicken-css::before,
+  .chicken-css::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    /*background-color: #000;*/
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+  }
+  
+  .chicken-css::before {
+    left: 12px;
+  }
+  
+  .chicken-css::after {
+    right: 12px;
+  }
+  
+  .beak {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ff8a00;
+    top: 20px;
+    left: 14px;
+    transform: rotate(180deg);
+  }
+  
+  .foot {
+    position: absolute;
+    width: 4px;
+    height: 12px;
+    background-color: #ff8a00;
+    bottom: -6px;
+    animation: footMove 0.5s ease-in-out alternate infinite;
+  }
+  
+  .foot-left {
+    left: 10px;
+  }
+  
+  .foot-right {
+    right: 10px;
+  }
+  
+  @keyframes footMove {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(4px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .wing {
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background-color: #ffc107;
+    top: 22px;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    animation: flap-wings 4s infinite linear;
+  }
+  
+  .wing-left {
+    left: 0;
+  }
+  
+  .wing-right {
+    right: 0;
+  }
+
+  @keyframes flap-wings {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+    
+  .comb {
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    background-color: #ff0000;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-5px);
+    border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%;
+  }
+  
+  .eye {
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    animation: blink 10s infinite;
+  }
+  
+  .eye-left {
+    left: 12px;
+  }
+  
+  .eye-right {
+    right: 12px;
+  }
+  
+  @keyframes blink {
+    0%, 90%, 100% {
+      height: 6px;
+    }
+    95% {
+      height: 0;
+    }
+  }
+  
+  
