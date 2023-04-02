@@ -238,5 +238,12 @@ canvas {
       height: 0;
     }
   }
+  iframe {
+     z-index: 3; 
+     position: absolute;
+     top: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+ }
   
   
